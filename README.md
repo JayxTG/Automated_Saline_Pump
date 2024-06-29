@@ -74,14 +74,17 @@ git clone https://github.com/your-username/Automated-Saline-Pump-System.git
 5. **Testing:**
 - Use the provided test environment to verify functionality.
 - Perform clinical testing and verify compliance with regulatory standards.
-📊 **Results**
+- 
+## 📊 Results
 - Successful implementation of an automated saline pump system.
 - Verified functionality through comprehensive testing and simulation.
 - Detailed analysis and documentation available in the project report.
-📚 **References**
+  
+## 📚 References
 Paul G. Yock, Stefanos Zenios, Josh Makower, Todd J. Brinton, Uday N. Kumar, "Biodesign: The Process of Innovating Medical Technologies", 2nd edition, New York: Cambridge University Press, 2009.
 Rajveer Shastri, Aparna Shastri, Sarika Shende, Nikita Swami, Rohini Yadav, "Controller Based Automatic Saline Infusion Pump," Department of Electronics and Telecommunication Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering and Technology Baramati, India, 2019.
 Achraf Haibi, Kenza Oufaska, Khalid El Yassini, Mohammed Boulmalf, and Mohsine Bouya, "Systematic Mapping Study on RFID Technology," IEEE, 2022.
 O. T. K. N. S. Patrick Loola Bokonda, "Predictive Analysis Using Machine Learning: Review of Trends and Methods," IEEE ISAECT 2020.
-📄 **License**
+
+## 📄 License
 This project is open-source and available under the MIT License.
