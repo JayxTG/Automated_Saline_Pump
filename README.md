@@ -4,9 +4,9 @@ This repository contains the implementation of an Automated Saline Pump System n
 
 ## 👥 Group Members
 
-- Fernando W.W.R.N.S.
-- Gammune D.J.T.
-- Herath H.M.S.I.
+- 
+- 
+- 
 
 Special thanks to Lohan, Charels, and Kaveendra for their assistance in transferring and verifying the data.
 
