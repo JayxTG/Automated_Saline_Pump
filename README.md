@@ -2,7 +2,7 @@
 
 This repository contains the implementation of an Automated Saline Pump System named FlowGuard. The project was completed as part of the Biomedical Device Designing module by Group D at the Department of Electronic & Telecommunication Engineering, University of Moratuwa, Sri Lanka.
 
-## 👥 Group Members
+## 👥 Team Members
 
 - Jayamadu Gammune
 - Isiri WIthanawasama
