@@ -4,9 +4,9 @@ This repository contains the implementation of an Automated Saline Pump System n
 
 ## 👥 Group Members
 
-- 
-- 
-- 
+- Jayamadu Gammune
+- Isiri WIthanawasama
+- Sandun Herath
 
 Special thanks to Lohan, Charels, and Kaveendra for their assistance in transferring and verifying the data.
 
