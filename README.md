@@ -27,6 +27,8 @@ The objective of this project is to design, implement, and verify an automated s
 **Hardware:**
 - Temperature sensor
 - Peristaltic pump
+-  ![Peristalic Pump](Images/Image.jpg)
+-  ![Breadboard Testing](Breadboard%20Testing/image.jpg)
 - Non-contact water level sensor
 - ESP8266 Wi-Fi module
 - Wireless power supply module
