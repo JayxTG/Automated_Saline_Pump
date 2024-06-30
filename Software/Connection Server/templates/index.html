@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saline Control</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 20px;
+            color: #555;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-container {
+			margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            gap: 6px; /* Adjust the gap to your desired spacing */
+        }
+
+        .button-container button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 100px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Saline Control</h1>
+    </div>
+    <div class="container">
+        <form action="/control" method="post">
+            <label for="board">Select Bed:</label>
+            <select id="board" name="board">
+ 				<option value="esp32_1">Bed 1</option>
+                <option value="esp32_2">Bed 2</option>
+            </select>
+            <br>
+            <button type="submit">Control Selected Board</button>
+        </form>
+		<h2>Flow Rate</h2>
+		<p>Status: <span id="pump-status">Loading...</span></p>
+        <h2>Control Device</h2>
+        <label for="pump-steps">Flow Rate (ml/min):</label>
+        <input type="number" id="pump-steps" name="pump-steps" required><br>
+        <div class="button-container">
+            <button onclick="controlPump()">Start Pump</button>
+            <button onclick="stopPump()">Stop Pump</button>
+            <button onclick="updatePump()">Update Pump</button>
+        </div>
+        
+    </div>
+
+    <script>
+        function updatePumpStatus() {
+            $.get('/PUMP_STATUS', function (data) {
+                $('#pump-status').text(data);
+            });
+        }
+
+        function controlPump() {
+            var flowRate = $('#pump-steps').val();
+            var selectedBoard = $('#esp-board').val();
+            $.get('/control?board=' + selectedBoard + '&value=' + flowRate, function (data) {
+                updatePumpStatus();
+            });
+        }
+
+        function stopPump() {
+            var selectedBoard = $('#esp-board').val();
+            $.get('/control?board=' + selectedBoard + '&value=0', function (data) {
+                updatePumpStatus();
+            });
+        }
+
+        function updatePump() {
+            var flowRate = $('#pump-steps').val();
+            var selectedBoard = $('#esp-board').val();
+            $.get('/updatePump?board=' + selectedBoard + '&value=' + flowRate, function (data) {
+                updatePumpStatus();
+            });
+        }
+
+        // Initial data load
+        updatePumpStatus();
+    </script>
+	
+</body>
+</html>
