@@ -42,7 +42,7 @@ The objective of this project is to design, implement, and verify an automated s
 
 1. **Clone the Repository:**
 ```bash
-git clone https://github.com/your-username/Automated-Saline-Pump-System.git
+git clone https://github.com/JayxTG/Automated_Saline_Pump.git
 ```
 2. **Software Setup:**
 - Deploy the web server software in the software/server directory.
